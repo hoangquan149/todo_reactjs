@@ -1,0 +1,78 @@
+.todo-list li {
+   position: relative;
+   display: block;
+   font-size: 1.2rem;
+   border-bottom: 1px solid #ededed;
+   padding: 15px 15px 15px 0px;
+
+   label {
+      display: block;
+      padding-left: 50px;
+      font-size: 26px;
+   }
+
+   .view .toggle {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+
+      margin: auto 0;
+      width: 40px;
+      height: 40px;
+
+      opacity: 0;
+   }
+
+   .view .toggle + label {
+      background-image: url("../../assets/icons/icon.svg");
+      background-repeat: no-repeat;
+      background-position: left;
+   }
+
+   .view .toggle:checked + label {
+      background-image: url("../../assets/icons/icon2.svg");
+   }
+
+   &.editing .edit {
+      display: block;
+      border: 1px solid #999;
+      padding: 12px 0px;
+      margin: 0 0 0 47px;
+      font-size: 26px;
+   }
+
+   .edit {
+      display: none;
+   }
+
+   &.editing .view {
+      display: none;
+   }
+
+   .destroy {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 10px;
+      bottom: 0;
+      width: 40px;
+      height: 40px;
+      margin: auto 0;
+      font-size: 30px;
+      color: #cc9a9a;
+      background-color: transparent;
+      transition: color 0.2s ease-out;
+
+      &:hover {
+         color: #af5b5e;
+      }
+   }
+
+   &:hover .destroy {
+      display: block;
+   }
+
+   .destroy:after {
+      content: "×";
+   }
+}
