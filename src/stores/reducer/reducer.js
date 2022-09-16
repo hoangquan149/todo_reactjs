@@ -24,7 +24,7 @@ export const initState = {
       name: "",
       completed: true,
    },
-   todos: StorageService.get(),
+   todos: StorageService.get()
 };
 
 export function reducer(state, action) {
